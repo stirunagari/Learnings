@@ -1,0 +1,70 @@
+<div ng-controller="homeController">
+	<!-- Nav Bar overlay -->
+    <div id="side-bar-overlay" cw-nav-collapse></div>
+    <!-- Navigation -->
+    <nav role="navigation" class="navbar navbar-default navbar-inverse" id='topNavBar' ng-class="contactNav">
+        <div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button id="topNavBtn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui-sref="home">DYNAMIC FORM</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Adding sidebar here-->
+    <div class="col-sm-12 main-content">   
+      <div class="col-sm-3 side-bar">
+        <h5>This is a form generated on dynamic data</h5>
+      </div>
+
+      <!-- The dynamic form starts here-->
+      <div class="col-sm-9">
+            <form name="loopform" novalidate ng-submit="loopform.$valid && submitLoopform()">
+                    <div class="form-group" ng-repeat="f in content.fields" ng-show="validate()">
+                        <!-- Rendering the elements based on the element type-->
+                        <div ng-if="f.type !== 'radio' && f.type !='password' && f.type !='select' && f.type !='checkbox'">
+                                <label>{{f.label}}</label>
+                                <input class="form-control" type="{{f.type}}" name="{{f.name}}" ng-model="f.value" ng-required="{{f.required}}" 
+                                ng-pattern="{{f.pattern}}">
+                                <p class="alert-danger" ng-show="loopform.{{f.name}}.$dirty && loopform.{{f.name}}.$error.email">Invalid email!</p>
+                        </div>
+                        <div ng-if="f.type == 'radio' || f.type == 'checkbox'">
+                                <label>{{f.label}}</label>
+                                <div ng-repeat="option in f.options">
+                                    <input type="{{f.type}}" name="{{f.name}}"> {{option}}
+                                </div>
+                        </div>
+                        <div ng-if="f.type == 'select'">
+                                <label>{{f.label}}</label>
+                                <select ng-model="f.value" ng-options="option for option in f.options"></select>
+                        </div>
+                        <!-- Performing a custom password match check here-->
+                        <div ng-if="f.type == 'password' && !f.from">
+                                <label>{{f.label}}</label>
+                                <input class="form-control" type="{{f.type}}" name="{{f.name}}" ng-model="password.new" ng-required="{{f.required}}">
+                                <br>
+                                <label>Re-enter password to confirm</label>
+                                <input class="form-control" type="{{f.type}}" name="password2" ng-match="password.new" ng-model="password.confirm" required>
+                                <span class="help-block alert-danger"
+                                    ng-show="loopform.password2.$dirty && loopform.password2.$invalid">
+                                Password's didnt match.
+                                </span>
+                        </div>
+                        <!--form validations-->
+                        <p class="alert-danger" ng-show="loopform.{{f.name}}.$dirty && loopform.{{f.name}}.$error.required">Required!</p>
+                        
+                    </div>
+                    <!-- Submissions-->
+                    <div class="form-group col-sm-3">
+                        <button class="form-control submit-btn" type="submit">Submit</button>
+                    </div>
+            </form>      
+     </div> 
+    </div>
+    
+</div>

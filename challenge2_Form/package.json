@@ -1,0 +1,21 @@
+{
+  "name": "challengeform",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "author": "Sri Divya",
+  "dependencies": {
+    "express": "^4.15.2",
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "angular-ui-router": "latest",
+    "bootbox.js": "latest",
+    "jquery": "latest"
+  }
+}
