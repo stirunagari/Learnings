@@ -1,0 +1,243 @@
+/* ----------------------Footer Styles --------------*/
+footer {
+    /*padding: 25px 0;*/
+    text-align: center;
+}
+
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    line-height: 70px;
+}
+
+footer ul.quicklinks {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-transform: none;
+    /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    line-height: 40px;
+}
+
+.footer-style{
+    margin-top: 70px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0px;
+    color: white;
+    background-color: #222222;
+    /*margin-top: 30px;*/
+}
+
+
+.copyright{
+	text-transform: uppercase;
+    text-transform: none;
+    /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    line-height: 40px;
+}
+
+/* ---------------- NavBar Styles ------------------*/
+
+body.menu-open{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body.menu-open > #side-bar-overlay {
+    position: fixed;
+    content: '';
+    display: block;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(46, 47, 51, 0.56);
+}
+
+.navbar-default {
+    border-color: transparent;
+    background-color: #222;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar-default .navbar-brand {
+    /*font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;*/
+    color: #fed136;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+    color: #fec503;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default .navbar-toggle {
+    border-color: white;
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: white;
+}
+
+.navbar-default .nav li a {
+    /*text-transform: uppercase;*/
+    /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-weight: 100;
+    letter-spacing: 0px;
+    color: grey;
+}
+
+.navbar-default .nav li:hover,
+.navbar-default .nav li:focus {
+    outline: 0;
+    color: grey;
+    background: white;
+}
+
+.navbar-default .navbar-nav>.active>li {
+    border-radius: 0;
+    color: grey;
+    background-color: white;
+}
+
+.navbar-default .navbar-nav>.active>li:hover,
+.navbar-default .navbar-nav>.active>li:focus {
+    /*color: #fff;*/
+    background-color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus{
+    background: white;
+    color: grey;
+}
+
+.navbar-header{
+    padding: 18px 0;
+}
+.navbar-header a{
+    font-size: 22px;
+    margin: 7px 14px;
+    padding: 10px;
+    font-weight: 500;  
+}
+
+.navbar-default>div{
+	/* padding-right: 35px; */
+    /* padding-left: 35px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        /*padding: 10px 0;*/
+        border: 0;
+        background-color: #cbd4da;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-nav {
+        float: left;
+        margin: 1px;
+    }
+    
+    
+    .navbar-nav>li {
+        /*margin: 10px 0;*/
+        font-size: 15px;
+        padding: 7px 0;
+        float: left;
+        border-left: 5px solid white;
+        float: left;
+    }
+
+    .navbar-inverse .navbar-nav>.active>li{
+        background: white;
+    }
+
+    .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-default .navbar-nav>.active>li {
+        border-radius: 0px;
+        background: white;
+    }
+
+    .navbar-default.navbar-shrink {
+        padding: 10px 0;
+        background-color: #222;
+    }
+
+    .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: grey;
+	font-weight: 500;
+}
+
+
+/*----------------- Sidebar Employee details styles ---------------------*/
+
+.side-bar{
+    background: #99c2e6;
+    height: -webkit-fill-available;
+}
+
+.main-content{
+    height: 100vh;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+
+/*----------------- Center detail page styles ----------------------*/
+.detail-box{
+    background: aliceblue;
+    height: -webkit-fill-available;
+}
+
+.dest_form_group{
+    padding: 1.5rem;
+    background: #eabd15b8;
+}
+
+
+.submit-btn{
+    color: white;
+    background: steelblue;
+    margin: 25px 0px;
+}
+
+#destination{
+    display: inline-block;
+    width: 95%;
+}
+
+.microphone{
+    width: 35px;
+    float: right;
+}

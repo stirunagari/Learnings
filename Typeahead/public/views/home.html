@@ -1,0 +1,36 @@
+<div ng-controller="homeController">
+	<!-- Nav Bar overlay -->
+    <div id="side-bar-overlay"></div>
+    <!-- Navigation -->
+    <nav role="navigation" class="navbar navbar-default navbar-inverse" id='topNavBar' ng-class="contactNav">
+        <div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button id="topNavBtn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a ui-sref="home">TYPE AHEAD</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Adding sidebar here-->
+    <div class="col-sm-12 main-content">   
+      <div class="col-sm-3 side-bar">
+      </div>
+      <div class="col-sm-9">
+            <div class="container-fluid">
+               <form id="locForm" method="get" submit="getLocations()"></form> 
+                <div class="form-group dest_form_group" ng-submit="getResults()">
+                    <h1>Where are you going ?</h1>
+                    <label for ="destination">Pickup Location</label>
+                    <input type="text" name="q" id="destination" ng-change="getLocations()" placeholder="city, airport, station,region and district..." ng-model="destination" uib-typeahead="dest.name for dest in destinations | filter:$viewValue | limitTo:8" class="form-control"/>
+                    <img ng-click="startDictation()" src="../images/microphone.svg" class="microphone"/>
+                </div>
+            </div>
+     </div> 
+    </div>
+    
+</div>

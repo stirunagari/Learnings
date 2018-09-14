@@ -1,0 +1,22 @@
+{
+  "name": "typeaheadform",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "author": "Sri Divya",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-bootstrap": "^2.5.6",
+    "angular-ui-router": "latest",
+    "bootbox.js": "latest",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "jquery": "latest"
+  }
+}
